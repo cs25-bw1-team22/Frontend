@@ -22,6 +22,7 @@ const Login = (props) => {
       return (
         <>
         
+    <h1 class="blinking">Login</h1>
     
           <form onSubmit={handleSubmit}>
     
@@ -34,7 +35,7 @@ const Login = (props) => {
     <button type='submit'>Submit</button>
     
         </form>
-        <h1>Login</h1>
+        
         </>
       );
     };

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Register = (props) => {
 
-const [creds, setCreds] = useState({username: "", password1: "", password2: ""});
+const [creds, setCreds] = useState({username: "", password: ""});
 const handleChange = event => {
     setCreds({...creds, [event.target.name]: event.target.value});
 };
@@ -22,7 +22,7 @@ const handleSubmit = event => {
   return (
     <>
 
-    <h1>Register Now!</h1>
+    <h1 class="blinking">Register Now!</h1>
 
       <form onSubmit={handleSubmit}>
 
@@ -30,9 +30,9 @@ const handleSubmit = event => {
 
 <input type='text' name='username' placeholder='username' onChange={handleChange} value={creds.username}/>
 
-<input type='password' name='password' placeholder='password' onChange={handleChange} value={creds.password1}/>
+<input type='password' name='password' placeholder='password' onChange={handleChange} value={creds.password}/>
 
-<input type='password' name='password' placeholder='password' onChange={handleChange} value={creds.password2}/>
+<input type='password' name='password' placeholder='confirm password' onChange={handleChange} value={creds.password}/>
 
 <button type='submit'>Submit</button>
 
