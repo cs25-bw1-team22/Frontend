@@ -25,7 +25,7 @@ const Login = (props) => {
     
           <form onSubmit={handleSubmit}>
     
-          <h2>Test</h2>
+          
     
     <input type='text' name='username' placeholder='username' onChange={handleChange} value={creds.username}/>
     

@@ -3,14 +3,14 @@ import axios from 'axios';
 
 const Register = (props) => {
 
-const [creds, setCreds] = useState({username: "", password: ""});
+const [creds, setCreds] = useState({username: "", password1: "", password2: ""});
 const handleChange = event => {
     setCreds({...creds, [event.target.name]: event.target.value});
 };
 
 const handleSubmit = event => {
     event.preventDefault();
-    axios.post('https://lambda-mud-test.herokuapp.com', creds)
+    axios.post('https://lambda-mud-test.herokuapp.com/localhost:8000/api/registration/', creds)
     .then(res => {console.log(res);
         localStorage.setItem('token', res.data.token);
         props.history.push('/Game-Page');
@@ -26,11 +26,13 @@ const handleSubmit = event => {
 
       <form onSubmit={handleSubmit}>
 
-    <h1>Test</h1>
+    
 
 <input type='text' name='username' placeholder='username' onChange={handleChange} value={creds.username}/>
 
-<input type='password' name='password' placeholder='password' onChange={handleChange} value={creds.password}/>
+<input type='password' name='password' placeholder='password' onChange={handleChange} value={creds.password1}/>
+
+<input type='password' name='password' placeholder='password' onChange={handleChange} value={creds.password2}/>
 
 <button type='submit'>Submit</button>
 
