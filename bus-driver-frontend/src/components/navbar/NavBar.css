@@ -1,7 +1,9 @@
 .topnav {
     background-color: black;
     overflow: hidden;
-    border: dashed 2px red;
+
+    border: solid 2px red;
+
   }
   
   .topnav a {
@@ -33,4 +35,6 @@
 
 .bgimg {
     background-image: url('https://f4.bcbits.com/img/a2372745034_10.jpg');
+
 }
+
